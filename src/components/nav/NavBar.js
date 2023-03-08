@@ -1,19 +1,22 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
+import { useHistory } from "react-router"
 
 export const NavBar = () => {
     const history = useHistory()
     return (
         <ul className="navbar">
             <li className="navbar__item">
-                Navigation link
+                <Link className="nav-link" to="/">Games</Link>
             </li>
+
             <li className="navbar__item">
-                Navigation link
+                <Link className="nav-link" to="/events">Events</Link>
             </li>
+
             <li className="navbar__item">
-                Navigation link
+                <Link className="nav-link" to="/profiles">Profiles</Link>
             </li>
             {
                 (localStorage.getItem("lu_token") !== null) ?
