@@ -19,7 +19,7 @@ export const EventProvider = (props) => {
       method: "POST",
       headers: {
         "Authorization": `Token ${localStorage.getItem("lu_token")}`,
-        "Content-Type": "application/json" 
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(event)
     })
