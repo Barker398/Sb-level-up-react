@@ -9,11 +9,11 @@ export const EventForm = () => {
   const { getGames, games } = useContext(GameContext)
 
   const [currentEvent, setCurrentEvent] = useState({
-      organizer: "",
-      description: "",
-      gameId: 1,
-      date: "",
-      time: "",
+    organizer: "",
+    description: "",
+    gameId: 1,
+    date: "",
+    time: "",
   });
 
   useEffect(() => {
@@ -22,33 +22,33 @@ export const EventForm = () => {
   }, []);
 
   const changeEventState = (event) => {
-    const newEventState ={...currentEvent };
+    const newEventState = { ...currentEvent };
     newEventState.gameId = event.target.value;
     setCurrentEvent(newEventState)
   };
 
   const changeEventOrganizerState = (event) => {
-      const newEventState = {...currentEvent };
-      newEventState.organizer = event.target.value;
-      setCurrentEvent(newEventState);
+    const newEventState = { ...currentEvent };
+    newEventState.organizer = event.target.value;
+    setCurrentEvent(newEventState);
   };
 
   const changeEventDescriptionState = (event) => {
-      const newEventState = {...currentEvent };
-      newEventState.description = event.target.value;
-      setCurrentEvent(newEventState);
+    const newEventState = { ...currentEvent };
+    newEventState.description = event.target.value;
+    setCurrentEvent(newEventState);
   };
 
   const changeEventDateState = (event) => {
-      const newEventState = {...currentEvent };
-      newEventState.date = event.target.value;
-      setCurrentEvent(newEventState);
+    const newEventState = { ...currentEvent };
+    newEventState.date = event.target.value;
+    setCurrentEvent(newEventState);
   };
 
   const changeEventTimeState = (event) => {
-      const newEventState = {...currentEvent };
-      newEventState.time = event.target.value;
-      setCurrentEvent(newEventState);
+    const newEventState = { ...currentEvent };
+    newEventState.time = event.target.value;
+    setCurrentEvent(newEventState);
   };
 
   return (
@@ -127,7 +127,7 @@ export const EventForm = () => {
           />
         </div>
       </fieldset>
-    
+
       {/* Create the rest of the input fields */}
 
       <button
